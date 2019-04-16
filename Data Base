@@ -1,0 +1,54 @@
+Link :http://localhost/phpmyadmin/tbl_structure.php?db=newdata&table=users
+
+
+-- phpMyAdmin SQL Dump
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+
+--
+-- Database: `newdata`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL,
+  `user_first` varchar(25) NOT NULL,
+  `user_last` varchar(25) NOT NULL,
+  `user_emailid` varchar(25) NOT NULL,
+  `user_pwd` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=hp8;
+
+CREATE TABLE `filedata` (
+  `file_id` varchar(250) DEFAULT NULL,
+  `data_file` varchar(600) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=hp8;
+COMMIT;
+
+CREATE TABLE `assessmentid` (
+  `id` int(20) DEFAULT NULL,
+  `subject` varchar(30) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=hp8;
+COMMIT;
+
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`user_id`);
+
+--
